@@ -112,8 +112,13 @@ def chat_with_assistant(user_input, history):
     context = "You are JARVIS, an intelligent and helpful AI assistant. Be conversational and friendly.\n\n"
 
     if history:
-        for human, assistant in history[-3:]:
-            context += f"Human: {human}\nJARVIS: {assistant}\n"
+        for msg in history[-6:]:  # last 3 exchanges = 6 messages
+            role = msg["role"]
+            content = msg["content"]
+            if role == "user":
+                context += f"Human: {content}\n"
+            else:
+                context += f"JARVIS: {content}\n"
 
     context += f"Human: {user_input}\nJARVIS:"
 
@@ -188,7 +193,8 @@ with gr.Blocks() as demo:
             return "", chat_history, None
 
         bot_response, audio_file = gradio_chat_with_voice(message, chat_history)
-        chat_history.append((message, bot_response))
+        chat_history.append({"role": "user", "content": message})
+        chat_history.append({"role": "assistant", "content": bot_response})
         return "", chat_history, audio_file
 
 
