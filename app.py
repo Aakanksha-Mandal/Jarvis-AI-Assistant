@@ -158,7 +158,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
     with gr.Row():
         with gr.Column(scale=2):
-            chatbot = gr.Chatbot(height=500, bubble_full_width=False)
+            chatbot = gr.Chatbot(height=500)
 
             with gr.Row():
                 msg = gr.Textbox(
