@@ -10,7 +10,7 @@ app_file: app.py
 pinned: false
 ---
 
-# JARVIS - AI Assistant
+# JARVIS - AI Assistant with Voice
 
 This project is a **personal AI assistant** inspired by JARVIS, built to be genuinely useful rather than just conversational.
 It supports natural language chat, persistent task management, deadline-aware summaries, and voice responses.
