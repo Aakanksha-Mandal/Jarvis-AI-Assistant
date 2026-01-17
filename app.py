@@ -145,9 +145,9 @@ def gradio_chat_with_voice(message, history):
     command_response = handle_productivity_commands(message)
 
     if command_response:
-        response = command_response
+        response = str(command_response).strip("[]{}")
     else:
-        response = chat_with_assistant(message, history)
+        response = str(chat_with_assistant(message, history)).strip("[]{}")
 
     try:
         tts = gTTS(text=response, lang="en", slow=False)
