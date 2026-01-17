@@ -149,7 +149,7 @@ def gradio_chat_with_voice(message, history):
         return response, None
 
 # STEP 6: Create beautiful Gradio interface
-with gr.Blocks(theme=gr.themes.Soft()) as demo:
+with gr.Blocks() as demo:
     gr.Markdown("""
     # 🤖 Your Personal JARVIS Assistant
     ### Built in Google Colab with AI superpowers!
@@ -204,4 +204,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
 
 print("\n🚀 Launching your AI assistant...")
-demo.launch(share=True, debug=True)
+demo.launch(debug=True, theme=gr.themes.Soft())
