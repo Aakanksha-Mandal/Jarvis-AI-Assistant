@@ -133,10 +133,11 @@ def chat_with_assistant(user_input, history):
     )
 
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    if isinstance(response, list):
-        response = response[0].get("text", "")
-    elif isinstance(response, dict):
-        response = response.get("text", "")
+    response = response.strip()
+    # if isinstance(response, list):
+    #     response = response[0].get("text", "")
+    # elif isinstance(response, dict):
+    #     response = response.get("text", "")
     return response
 
 # STEP 5: Create Gradio interface with voice
