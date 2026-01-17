@@ -8,7 +8,7 @@ Original file is located at
 """
 
 # STEP 1: Install packages (uncomment if needed)
-!pip install transformers gradio torch accelerate gTTs -q
+#!pip install transformers gradio torch accelerate gTTs -q
 
 # STEP 2: Import libraries
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
