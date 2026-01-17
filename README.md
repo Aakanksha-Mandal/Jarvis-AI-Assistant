@@ -1,4 +1,16 @@
-# JARVIS -AI Assistant
+---
+title: JARVIS – AI Assistant
+emoji: "🤖"
+colorFrom: "blue"
+colorTo: "green"
+sdk: "gradio"
+sdk_version: "3.40"
+python_version: "3.13"
+app_file: app.py
+pinned: false
+---
+
+# JARVIS - AI Assistant
 
 This project is a **personal AI assistant** inspired by JARVIS, built to be genuinely useful rather than just conversational.
 It supports natural language chat, persistent task management, deadline-aware summaries, and voice responses.
