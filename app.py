@@ -100,7 +100,7 @@ def handle_productivity_commands(user_input):
 # STEP 3: Load a SMARTER conversational AI model
 print("Loading your AI assistant... (this might take a minute)")
 
-model_name = "google/flan-t5-large"   # Hint: flan-t5-large
+model_name = "google/flan-t5-base"   # Hint: flan-t5-large
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
